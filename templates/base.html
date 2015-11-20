@@ -1,6 +1,250 @@
 <html>
 <head>
+ <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title> {% block head_title %} WE {%endblock%}</title>
-{%block content%}{%endblock%}
+    <!-- Bootstrap -->
+      {% load staticfiles %}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- for fontawesome icon css file -->
+
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- for content animate css file -->
+
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <!-- For content animatin  -->
+
+  <script src="{% static 'js/wow.min.js' %}"></script>
+
+  <!-- bootstrap js file -->
+
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <!-- slick slider js file -->
+
+  <script src="{% static 'js/slick.min.js'}"></script>
+ <script src="{% static 'js/jquery-1.11.3.min.js' %}"> </script>
+  <!-- news ticker jquery file -->
+
+  <script src="{% static 'js/jquery.li-scroller.1.0.js' %}"></script></script>
+
+    <!-- custom js file include -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ 
+
+
+  <script src="{% static 'js/custom.js' %}"></script>
+    <!-- google fonts  -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'> 
+
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+    <!-- for news ticker css file -->
+
+     <link href="{% static 'css/li-scroller.css' %}" rel="stylesheet">
+
+     <!-- slick slider css file -->
+
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet">
+
+    <!-- website theme file -->
+
+    <!-- <link href="{ %static css/theme-red.css %}" rel="stylesheet"> -->
+
+     <!-- <link href="{ %static css/theme-yellow.css %}" rel="stylesheet"> -->
+
+     <link href=" {% static 'css/theme.css' %}" rel="stylesheet">
+
+    <!-- main site css file -->    
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"></head>
+<body>
+{%block content%}
+  <!-- Preloader -->
+
+  <div id="preloader">
+
+    <div id="status">&nbsp;</div>
+
+  </div>
+
+  <!-- End Preloader -->
+
+   
+
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+  
+
+  <div class="container">
+
+    <div class="box_wrapper">
+
+      <!-- ==================start header=============== -->
+
+      <header id="header">     
+
+        <!-- start header top area -->
+
+        <div class="header_top">
+
+            <!-- Static navbar -->
+
+          <nav class="navbar navbar-default" role="navigation">
+
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                  <span class="sr-only">Toggle navigation</span>
+
+                  <span class="icon-bar"></span>
+
+                  <span class="icon-bar"></span>
+
+                  <span class="icon-bar"></span>
+
+                </button>              
+
+              </div>
+
+              <div id="navbar" class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav custom_nav">
+
+                  <li class=""><a href="index.html">Home</a></li>          
+
+                  <li><a href="#">Shortcodes</a></li>
+
+                  <li><a href="category-archive.html">Archive</a></li>
+
+                  <li><a href="#">Contact</a></li>
+
+                  <li><a href="404.html">404 Page</a></li>
+
+                </ul>           
+
+              </div><!--/.nav-collapse -->
+
+            </div><!--/.container-fluid -->
+
+          </nav>
+
+         <div class="header_search">
+
+          <button id="searchIcon"><i class="fa fa-search"></i></button>
+
+           <!-- <a id="searchIcon" href="#"><i class="fa fa-search"></i></a> -->
+
+          <div id="shide">
+
+            <div id="search-hide">
+
+              <form>
+
+              <input type="text" size="40" placeholder="Search here ...">
+
+              </form>
+
+              <button class="remove"><span><i class="fa fa-times"></i></span></button>
+
+            </div>
+
+          </div>
+
+         </div>
+
+        </div>
+
+        <!-- End header top area -->
+
+
+
+        <!-- start header bottom area -->
+
+        <div class="header_bottom">
+
+          <div class="logo_area">
+
+          <!-- for your image logo -->
+
+          <!-- <a class="logo" href="index.html">
+
+           <img src="img/logo.jpg" alt="logo">
+
+          </a> -->
+
+
+
+          <!-- for your text logo -->
+
+            <a class="logo" href="#">
+
+            <b>S</b>ybar Magazine
+
+            <span>A Pro Magazine Theme</span>
+
+            </a>
+
+          </div>
+
+          <div class="top_addarea">
+
+            <a href="#"><img src="img/addbanner_728x90_V1.jpg" alt="img"></a>
+
+          </div>
+
+        </div>
+
+        <!-- start header top area -->     
+
+      </header>    
+
+      <!-- ==================End header=============== -->
+
+      <!-- start news sticker -->
+
+      <div class="latest_newsarea">      
+
+        <span>Latest News</span>
+
+        <ul id="ticker01" class="news_sticker">
+
+          <li><a href="#">My First News Item</a></li> 
+
+          <li><a href="#">My Second News Item</a></li>
+
+          <li><a href="#">My Third News Item</a></li>
+
+          <li><a href="#">My Four News Item</a></li> 
+
+          <li><a href="#">My Five News Item</a></li>
+
+          <li><a href="#">My Six News Item</a></li>
+
+          <li><a href="#">My Seven News Item</a></li> 
+
+          <li><a href="#">My Eight News Item</a></li>
+
+          <li><a href="#">My Nine News Item</a></li>          
+
+        </ul>    
+
+      </div>
+
+    <!-- End news sticker -->
+
+{%endblock%}
 </body>
 </html>
