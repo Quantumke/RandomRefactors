@@ -15,5 +15,8 @@ def index(request):
 		'sport':Post.objects.filter(group='Sports'),
 		'health':Post.objects.filter(group='Health'),
 		'fhealth':Post.objects.filter(group='Health').filter(status='Featured'),
-		'lifestyle':Post.objects.filter(group='Lifestyle')	
+		'lifestyle':Post.objects.filter(group='Lifestyle'),
+		'flifestyle':Post.objects.filter(status='Featured').filter(group='Lifestyle'),
+		'politics':Post.objects.filter(group='politics'),
+		'ppolitcs':Post.objects.filter(group='politics').filter(status='Featured')
 	})
