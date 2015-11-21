@@ -178,59 +178,31 @@
 
               <!-- start category one -->
               <div class="single_category wow fadeInDown">
-                <div class="category_title">
-                  <a href="category-archive.html">Category 1</a>
-                </div>
+             
                 <div class="single_category_inner">
                   <ul class="catg_nav">
+{% if grapevine %}
+{% for g in grapevine %}
                     <li>
                       <div class="catgimg_container">
                         <a class="catg1_img" href="single_page.html">
-                          <img src="http://lorempixel.com/310/150/" alt="img">
+                          <img src="{{ g.image }}" alt="img">
                           </a>
                       </div>
-                      <a class="catg_title" href="single_page.html"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                      <a class="catg_title" href="single_page.html">{{ g.description }}</a>
                       <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
+                        <p><i class="fa fa-calendar"></i>{{ g.Date}}</p>
+                        <a href="#"><i class="fa fa-comments"></i>{{ g.counter }}</a>
                       </div>
                     </li>
-                    <li>
-                      <div class="catgimg_container">
-                        <a class="catg1_img" href="single_page.html">
-                          <img src="http://lorempixel.com/310/150/" alt="img">
-                        </a>
-                      </div>
-                      <a class="catg_title" href="single_page.html">Fusce eu nulla semper porttitor felis sit amet</a>
-                      <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                      </div>
-                    </li>
-                     <li>
-                      <div class="catgimg_container">
-                        <a class="catg1_img" href="single_page.html">
-                          <img src="http://lorempixel.com/310/150/" alt="img">
-                        </a>
-                      </div>
-                      <a class="catg_title" href="single_page.html"> Curabitur ac dictum nisl eu hendrerit ante</a>
-                      <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="single_page.html"><i class="fa fa-comments"></i>20 Comments</a>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="catgimg_container">
-                        <a class="catg1_img" href="#">
-                          <img src="http://lorempixel.com/310/150/" alt="img">
-                        </a>
-                      </div>
-                      <a class="catg_title" href="#">Fusce eu nulla semper porttitor felis sit amet</a>
-                      <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                      </div>
-                    </li>
+{%endfor%}
+{%else%}
+<p> There are no post </post>
+{%endif%}
+
+
+             
+                   
                   </ul>
                 </div>
               </div> <!-- End category one -->  
