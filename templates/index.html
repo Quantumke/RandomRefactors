@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%extends "base.html"%}
 
 
@@ -24,6 +25,158 @@
 
 
 <div class="thumbnail_slider_area">
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SybarMagazine</title>
+
+    {% load staticfiles %}
+ <script src="http://wpfreeware.com/themes/cybarmagazine/wp-content/themes/SybarMagazine_v1.1/js/custom.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- for fontawesome icon css file -->
+
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- for content animate css file -->
+
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <!-- For content animatin  -->
+
+  
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'> 
+
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+    <!-- for news ticker css file -->
+
+     <link href="{% static 'css/li-scroller.css' %}" rel="stylesheet">
+
+     <!-- slick slider css file -->
+
+    <link href="{% static 'css/slick.css' %}" rel="stylesheet">
+
+    <!-- website theme file -->
+
+    <!-- <link href="{ %static css/theme-red.css %}" rel="stylesheet"> -->
+
+     <!-- <link href="{ %static css/theme-yellow.css %}" rel="stylesheet"> -->
+
+     <link href=" {% static 'css/theme.css' %}" rel="stylesheet">
+
+    <!-- main site css file -->    
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"></head>
+<body>
+<body>
+  <!-- =========================
+    //////////////This Theme Design and Developed //////////////////////
+    //////////// by www.wpfreeware.com======================-->
+{% block content %}
+{%if Post %}
+{% for p in Post %}
+<p>post{{p.title}}</p>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- End Preloader -->
+   
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+  
+  <div class="container">
+    <div class="box_wrapper">
+      <!-- ==================start header=============== -->
+      <header id="header">     
+        <!-- start header top area -->
+        <div class="header_top">
+            <!-- Static navbar -->
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>              
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav custom_nav">
+                  <li class=""><a href="index.html">Home</a></li>          
+                  <li><a href="#">Shortcodes</a></li>
+                  <li><a href="category-archive.html">Archive</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="404.html">404 Page</a></li>
+                </ul>           
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </nav>
+         <div class="header_search">
+          <button id="searchIcon"><i class="fa fa-search"></i></button>
+           <!-- <a id="searchIcon" href="#"><i class="fa fa-search"></i></a> -->
+          <div id="shide">
+            <div id="search-hide">
+              <form>
+              <input type="text" size="40" placeholder="Search here ...">
+              </form>
+              <button class="remove"><span><i class="fa fa-times"></i></span></button>
+            </div>
+          </div>
+         </div>
+        </div>
+        <!-- End header top area -->
+
+        <!-- start header bottom area -->
+        <div class="header_bottom">
+          <div class="logo_area">
+          <!-- for your image logo -->
+          <!-- <a class="logo" href="index.html">
+           <img src="img/logo.jpg" alt="logo">
+          </a> -->
+
+          <!-- for your text logo -->
+            <a class="logo" href="#">
+            <b>S</b>ybar Magazine
+            <span>A Pro Magazine Theme</span>
+            </a>
+          </div>
+          <div class="top_addarea">
+            <a href="#"><img src="img/addbanner_728x90_V1.jpg" alt="img"></a>
+          </div>
+        </div>
+        <!-- start header top area -->     
+      </header>    
+      <!-- ==================End header=============== -->
+      <!-- start news sticker -->
+      <div class="latest_newsarea">      
+        <span>Latest News</span>
+        <ul id="ticker01" class="news_sticker">
+          <li><a href="#">My First News Item</a></li> 
+          <li><a href="#">My Second News Item</a></li>
+          <li><a href="#">My Third News Item</a></li>
+          <li><a href="#">My Four News Item</a></li> 
+          <li><a href="#">My Five News Item</a></li>
+          <li><a href="#">My Six News Item</a></li>
+          <li><a href="#">My Seven News Item</a></li> 
+          <li><a href="#">My Eight News Item</a></li>
+          <li><a href="#">My Nine News Item</a></li>          
+        </ul>    
+      </div>
+    <!-- End news sticker -->
+
+    <!-- ==================start top thumbnail slidier =============== -->
+    <div class="thumbnail_slider_area">
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
       <!-- Set up your HTML -->
       <div class="owl-carousel">
         <div class="signle_iteam">
@@ -76,10 +229,20 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
     
 
  
+=======
+    <!-- ==================End top thumbnail slidier =============== -->
+
+    <!-- =========================
+        //////////////This Theme Design and Developed //////////////////////
+        //////////// by www.wpfreeware.com======================-->
+
+    <!-- ==================start content body section=============== -->
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
     <section id="contentbody">
       <div class="row">
       <!-- start left bar content -->
@@ -87,14 +250,18 @@
           <div class="row">
             <div class="left_bar">
             <!-- start single leftbar -->
+<<<<<<< HEAD
 {% if Post %}
 {% for F in Post %}
 
+=======
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
               <div class="single_leftbar">
                 <h2><span>Recent Post</span></h2>
                 <div class="singleleft_inner">
                   <ul class="recentpost_nav wow fadeInDown">
                     <li>
+<<<<<<< HEAD
                       <a href="single_page.html"><img src="{{F.image}}" alt="img"></a>
                       <a class="recent_title" href="single_page.html"> {{F.title}} </a>
                       </li>
@@ -108,6 +275,22 @@
 <p> There are no post </post>
 
 {%endif%}
+=======
+                      <a href="single_page.html"><img src="http://lorempixel.com/150/80/" alt="img"></a>
+                      <a class="recent_title" href="single_page.html"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                      </li>
+                      <li>
+                      <a href="single_page.html"><img src="http://lorempixel.com/150/80/" alt="img"></a>
+                      <a class="recent_title" href="single_page.html"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                      </li>
+                      <li>
+                      <a href="single_page.html"><img src="http://lorempixel.com/150/80/" alt="img"></a>
+                      <a class="recent_title" href="single_page.html"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
               <!-- start single leftbar -->
               <div class="single_leftbar wow fadeInDown">
                 <h2><span>Side Add</span></h2>
@@ -118,8 +301,11 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
         <!-- End left bar content -->
 
         <!-- start left middlebar content -->
@@ -1057,7 +1243,21 @@
     <!-- custom js file include -->
   <script src="../../static/js/custom.js"></script> 
 
+<<<<<<< HEAD
 {%endblock%}
 
  
  
+=======
+  <!-- =========================
+        //////////////This Theme Design and Developed //////////////////////
+        //////////// by www.wpfreeware.com======================-->
+    
+      {% endfor %}
+{%else%}
+<p>There are no posts</p>
+{%endif%}
+{%endblock%}
+  </body>
+</html>
+>>>>>>> 8bb6879efff4d6b1dd8ec3b3ff5a48ee6000e3f8
