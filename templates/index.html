@@ -87,27 +87,29 @@
           <div class="row">
             <div class="left_bar">
             <!-- start single leftbar -->
-{% if Post %}
-{% for F in Post %}
+
 
               <div class="single_leftbar">
                 <h2><span>Recent Post</span></h2>
+
                 <div class="singleleft_inner">
                   <ul class="recentpost_nav wow fadeInDown">
+{% if Post %}
+{% for F in Post %}
                     <li>
                       <a href="single_page.html"><img src="{{F.image}}" alt="img"></a>
                       <a class="recent_title" href="single_page.html"> {{F.title}} </a>
                       </li>
-                     
-                  </ul>
-
-                </div>
-              </div>
-{%endfor%}
+                     {%endfor%}
 {%else%}
 <p> There are no post </post>
 
 {%endif%}
+                  </ul>
+
+                </div>
+              </div>
+
               <!-- start single leftbar -->
               <div class="single_leftbar wow fadeInDown">
                 <h2><span>Side Add</span></h2>
