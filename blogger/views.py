@@ -8,5 +8,6 @@ def index(request):
 
 		'Post':Post.objects.filter(author='Ben'),
 		'cats':Post.objects.filter(group='Grapevine')
+		'hit':Post.objects.filter(pk=1).update(counter=F('counter') + 1)
 		
 	})
