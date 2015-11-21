@@ -12,6 +12,7 @@ class Post(models.Model):
         date = models.DateField(max_length=100, unique=False)
 	date = models.DateField(max_length=100, unique=False)
 	group = models.CharField(max_length=100, unique=False)
+	status = models.CharField(max_length=100, unique=False)
 
 
                 

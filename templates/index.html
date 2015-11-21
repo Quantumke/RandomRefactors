@@ -243,24 +243,30 @@
                 <div class="category_three">
                       <!-- start category Three -->
                   <div class="single_category">
-                    <div class="category_title">
+                   <!--- <div class="category_title">
                       <a href="single_page.html">Category 3</a>
-                    </div>
+                    </div> -->
                     <div class="single_category_inner">
                       <ul class="catg_nav catg_nav3">
+{% if fhealth%}
+{% for fh in fhealth%}
                         <li>
                           <div class="catgimg_container">
                             <a class="catg1_img" href="single_page.html">
-                              <img src="http://lorempixel.com/292/150/" alt="img">
+                              <img src="{{ fh.image}}">
                               </a>
                           </div>
-                          <a class="catg_title" href="#"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                          <a class="catg_title" href="#"> {{ fh.title }}</a>
                           <div class="sing_commentbox">
-                            <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                            <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
+                            <p><i class="fa fa-calendar"></i>{{ fh.date }}</p>
+                            <a href="#"><i class="fa fa-comments"></i>{{ fh.counter}}</a>
                           </div>
-                          <p class="post-summary">Duis erat purus, tincidunt vel ullamcorper ut, consequat tempus nibh. Proin condimentum risus ligula, dignissim mollis tortor hendrerit vel. Aliquam...</p>
-                        </li>                   
+                          <p class="post-summary">{{ fh.description}}</p>
+                        </li>  
+                 {%endfor%}
+{%else%}
+<p>No Posts </p>
+{%endif%}
                       </ul>
                       <!-- start category3 bottom post -->
                       <div class="catg3_bottompost wow fadeInDown">

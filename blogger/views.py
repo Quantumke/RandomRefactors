@@ -14,5 +14,6 @@ def index(request):
 		'grapevine':Post.objects.filter(group='Grapevine'),
 		'sport':Post.objects.filter(group='Sports'),
 		'health':Post.objects.filter(group='Health'),
+		'fhealth':Post.objects.filter(group='Health').filter(status='Featured'),
 		'lifestyle':Post.objects.filter(group='Lifestyle')	
 	})
