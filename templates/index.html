@@ -301,10 +301,10 @@
                 </div><!-- End category three --> 
                 <div class="category_four wow fadeInDown">
                   <!-- start category Four -->
-                  <div class="single_category">
+                 <!--- <div class="single_category">
                     <div class="category_title">
                       <a href="#">Category 4</a>
-                    </div>
+                    </div> -->
                     <div class="single_category_inner">
                       <ul class="catg_nav catg_nav3">
 {% if flifestyle%}
@@ -332,63 +332,29 @@
                       <!-- start category4 bottom post -->
                       <div class="catg3_bottompost wow fadeInDown">
                         <ul class="catg3_snav">
-{% if ppolitics%}
+{% if lifestyle%}
+{% for pp in lifestyle%}
                           <li>
                             <div class="media">
                               <a class="media-left" href="single_page.html">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
+                                <img src="{{ pp.image}}" alt="img">
                               </a>
                               <div class="media-body">
-                                <a class="catg_title" href="#"> Aliquam malesuada diam eget turpis varius</a>
+                                <a class="catg_title" href="#"> {{ pp.title}}</a>
                                  <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
+                                  <p><i class="fa fa-calendar"></i>{{ pp.date}}</p>
+                                  <a href="#"><i class="fa fa-comments"></i>{{ pp.counter}}</a>
                                 </div>
                               </div>
                             </div>
                           </li>
-                           <li>
-                            <div class="media">
-                              <a class="media-left" href="#">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="#"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                            <li>
-                            <div class="media">
-                              <a class="media-left" href="#">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="#"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                            <li>
-                            <div class="media">
-                              <a class="media-left" href="#">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="#"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
+{%endfor%}
+{%else%}
+<p>No Post</p>
+{%endif%}
+
+                        
+                        
                         </ul>
                       </div>
                     </div>
