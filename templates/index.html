@@ -271,62 +271,29 @@
                       <!-- start category3 bottom post -->
                       <div class="catg3_bottompost wow fadeInDown">
                         <ul class="catg3_snav">
+{% if health%}
+{% for h in health%}
                           <li>
                             <div class="media">
                               <a class="media-left" href="single_page.html">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
+                                <img src="{{ h.image }}" alt="img">
                               </a>
                               <div class="media-body">
-                                <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>
+                                <a class="catg_title" href="single_page.html"> {{ h.title}}</a>
                                  <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
+                                  <p><i class="fa fa-calendar"></i>{{ h.date}}</p>
+                                  <a href="#"><i class="fa fa-comments"></i>{{ h.counter}}</a>
                                 </div>
                               </div>
                             </div>
                           </li>
-                           <li>
-                            <div class="media">
-                              <a class="media-left" href="single_page.html">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                            <li>
-                            <div class="media">
-                              <a class="media-left" href="single_page.html">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="#"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                            <li>
-                            <div class="media">
-                              <a class="media-left" href="single_page.html">
-                                <img src="http://lorempixel.com/70/70/" alt="img">
-                              </a>
-                              <div class="media-body">
-                                <a class="catg_title" href="single_page.html"> Aliquam malesuada diam eget turpis varius</a>
-                                 <div class="sing_commentbox">
-                                  <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                                  <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
+{%endfor%}
+                         {%else%}
+<p>No Posts </p>
+{%endif%}
+
+                        
+                         
                         </ul>
                       </div>
                     </div>
