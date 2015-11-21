@@ -11,5 +11,8 @@ def index(request):
 		'cats':Post.objects.filter(group='Grapevine'),
 		'hit':Post.objects.filter(pk=1).update(counter=F('counter') + 1),
 	        'popular':Post.objects.order_by('-counter'),
-		'grapevine':Post.objects.filter(group='Grapevine')	
+		'grapevine':Post.objects.filter(group='Grapevine'),
+		'sport':Post.objects.filter(group='Sports'),
+		'health':Post.objects.filter(group='Health'),
+		'lifestyle':Post.objects.filter(group='Lifestyle')	
 	})

@@ -191,7 +191,7 @@
                       </div>
                       <a class="catg_title" href="single_page.html">{{ g.description }}</a>
                       <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>{{ g.Date}}</p>
+                        <p><i class="fa fa-calendar"></i>{{ g.date}}</p>
                         <a href="#"><i class="fa fa-comments"></i>{{ g.counter }}</a>
                       </div>
                     </li>
@@ -209,37 +209,32 @@
 
               <!-- start category Two -->
               <div class="single_category  wow fadeInDown">
-                <div class="category_title">
+               <!------- <div class="category_title">
                   <a href="category-archive.html">Category 2</a>
-                </div>
+                </div> --->
                 <div class="single_category_inner">
                   <ul class="catg_nav catg_nav2">
+{% if sport%}
+{% for s in sport %}
                     <li>
                       <div class="catgimg_container">
                         <a class="catg1_img" href="#">
-                          <img src="http://lorempixel.com/310/300/" alt="img">
+                          <img src="{{ s.image }}" alt="img">
                           </a>
                       </div>
-                      <a class="catg_title" href="#"> Curabitur ac dictum nisl eu hendrerit ante</a>
+                      <a class="catg_title" href="#"> {{ s.title}}</a>
                       <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
+                        <p><i class="fa fa-calendar"></i>{{ s.date}}</p>
+                        <a href="#"><i class="fa fa-comments"></i>{{ s.counter}}</a>
                       </div>
-                       <p class="post-summary">Suspendisse mauris dui, interdum vitae vehicula ut, posuere sed lectus. Nulla facilisi. Curabitur...</p>
+                       <p class="post-summary">{{ s.description}}</p>
                     </li>
-                    <li>
-                      <div class="catgimg_container">
-                        <a class="catg1_img" href="#">
-                          <img src="http://lorempixel.com/310/300/" alt="img">
-                        </a>
-                      </div>
-                      <a class="catg_title" href="#">Fusce eu nulla semper porttitor felis sit amet</a>
-                      <div class="sing_commentbox">
-                        <p><i class="fa fa-calendar"></i>19 Nov 2014</p>
-                        <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
-                      </div>
-                      <p class="post-summary">Suspendisse mauris dui, interdum vitae vehicula ut, posuere sed lectus. Nulla facilisi. Curabitur...</p>
-                    </li>                    
+                  {%endfor%}
+{%else%}
+<p> No Posts </p>
+{%endif%}
+
+                   
                   </ul>
                 </div>
               </div> <!-- End category Two --> 
