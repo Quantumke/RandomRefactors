@@ -553,107 +553,28 @@
                 <h2><span>Popular Post</span></h2>
                 <div class="singleleft_inner">
                   <ul class="catg3_snav ppost_nav wow fadeInDown">
+{% if popular %}
+{% for p in popular %}
                     <li>
+
                       <div class="media">
+
+
                         <a href="single_page.html" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
+                          <img alt="img" src="{{ p.image}}">
                         </a>
                         <div class="media-body">
-                          <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                        
+                          <a href="single_page.html" class="catg_title"> {{p.title }}</a>        
+              
                         </div>
                       </div>
                     </li>
-                     <li>
-                      <div class="media">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                                
-                        </div>
-                      </div>
-                    </li>
-                      <li>
-                      <div class="media">
-                        <a href="single_page.html" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                               
-                        </div>
-                      </div>
-                    </li>
-                      <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                         
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                        
-                        </div>
-                      </div>
-                    </li>
-                     <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                                
-                        </div>
-                      </div>
-                    </li>
-                      <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                               
-                        </div>
-                      </div>
-                    </li>
-                      <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                         
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>
-                          
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <a href="#" class="media-left">
-                          <img alt="img" src="http://lorempixel.com/70/70/">
-                        </a>
-                        <div class="media-body">
-                          <a href="#" class="catg_title"> Aliquam malesuada diam eget turpis varius</a>                                
-                        </div>
-                      </div>
-                    </li>                     
+             {%endfor%}
+{%else%}
+<li> There are no post </li>
+
+{%endif%}        
+                   
                   </ul>
                 </div>
               </div>
